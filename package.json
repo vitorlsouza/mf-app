@@ -1,0 +1,14 @@
+{
+  "name": "mf-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "<vitorlopesdesouza@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "host:dev": "cd host && pnpm run start",
+    "remote:dev": "cd remote && pnpm run start",
+    "build:host": "cd host && pnpm run build:dev",
+    "build:remote": "cd remote && pnpm run build:dev",
+    "build": "pnpm --filter=./host build && pnpm --filter=./remote build"
+  }
+}
