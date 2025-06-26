@@ -1,0 +1,65 @@
+# Module Federation
+
+### Quick Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/vitorlsouza/mf-app.git
+   cd mf-app
+   ```
+
+2. **Install dependencies**
+   ```bash
+   pnpm install
+   ```
+
+3. **Run in development mode**
+   ```bash
+   pnpm dev
+   ```
+
+   This will start both services simultaneously:
+   - **Host**: http://localhost:8080
+   - **Remote**: http://localhost:8081
+
+
+## 📁 Project Structure
+
+```
+mf-app/
+├── 📂 host/                    # Main application
+│   ├── 📂 src/
+│   │   ├── App.tsx            # Host main component
+│   │   ├── index.ts           # Entry point
+│   │   └── index.css          # Global styles
+│   ├── module-federation.config.ts
+│   ├── rspack.config.ts
+│   └── package.json
+│
+├── 📂 remote/                  # Remote module
+│   ├── 📂 src/
+│   │   ├── App.tsx            # Exposed component
+│   │   ├── index.ts           # Entry point
+│   │   └── index.css          # Module styles
+│   ├── module-federation.config.ts
+│   ├── rspack.config.ts
+│   └── package.json
+│
+└── package.json               # Root configuration
+```
+
+## 🔧 Development Configuration
+
+### Default Ports
+- **Host**: http://localhost:8080
+- **Remote**: http://localhost:8081
+
+## 📚 Useful Scripts
+
+| Command | Description |
+|---------|-------------|
+| `pnpm dev` | Start both services in development mode |
+| `pnpm build` | Build both projects for production |
+| `pnpm run host:dev` | Start only the host |
+| `pnpm run remote:dev` | Start only the remote |
+

@@ -5,10 +5,14 @@
   "author": "<vitorlopesdesouza@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "dev": "concurrently \"pnpm --filter=./host start\" \"pnpm --filter=./remote start\"",
     "host:dev": "cd host && pnpm run start",
     "remote:dev": "cd remote && pnpm run start",
     "build:host": "cd host && pnpm run build:dev",
     "build:remote": "cd remote && pnpm run build:dev",
-    "build": "pnpm --filter=./host build && pnpm --filter=./remote build"
+    "build": "concurrently \"pnpm --filter=./host build\" \"pnpm --filter=./remote build\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0"
   }
 }
