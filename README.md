@@ -21,12 +21,12 @@ pnpm dev
 
 ## 📋 Available Scripts
 
-| Command | Description |
-|---------|-------------|
-| `pnpm dev` | Start both applications in development mode |
-| `pnpm build` | Build both applications for production |
-| `pnpm run host:dev` | Start only the host application |
-| `pnpm run remote:dev` | Start only the remote application |
+| Command               | Description                                 |
+| --------------------- | ------------------------------------------- |
+| `pnpm dev`            | Start both applications in development mode |
+| `pnpm build`          | Build both applications for production      |
+| `pnpm run host:dev`   | Start only the host application             |
+| `pnpm run remote:dev` | Start only the remote application           |
 
 ## 🏗️ Architecture
 
@@ -61,9 +61,3 @@ mf-app/
 │
 └── package.json               # Root configuration
 ```
-
-## 🔧 Development
-
-### Default Ports
-- **Host**: http://localhost:8080
-- **Remote**: http://localhost:8081
