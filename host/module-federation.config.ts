@@ -3,7 +3,7 @@ export const mfConfig = {
   filename: "remoteEntry.js",
   remotes: {
     remote:
-      "remote@https://vitor-lopes-de-souza-11-remote-mf-app-vitorlsouza-d03e9e851-ze.zephyrcloud.app/remoteEntry.js",
+      "remote@https://t-latest-remote-mf-app-vitorlsouza-ze.zephyrcloud.app/remoteEntry.js",
   },
   exposes: {},
   shared: ["react", "react-dom"],
