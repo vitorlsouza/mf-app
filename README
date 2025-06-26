@@ -1,27 +1,41 @@
 # Module Federation
 
-### Quick Installation
+### Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/vitorlsouza/mf-app.git
-   cd mf-app
-   ```
+```bash
+# Clone the repository
+git clone https://github.com/vitorlsouza/mf-app.git
+cd mf-app
 
-2. **Install dependencies**
-   ```bash
-   pnpm install
-   ```
+# Install dependencies
+pnpm install
 
-3. **Run in development mode**
-   ```bash
-   pnpm dev
-   ```
+# Start development servers
+pnpm dev
+```
 
-   This will start both services simultaneously:
-   - **Host**: http://localhost:8080
-   - **Remote**: http://localhost:8081
+### 🌐 Access the Applications
 
+- **Host**: http://localhost:8080
+- **Remote**: http://localhost:8081
+
+## 📋 Available Scripts
+
+| Command | Description |
+|---------|-------------|
+| `pnpm dev` | Start both applications in development mode |
+| `pnpm build` | Build both applications for production |
+| `pnpm run host:dev` | Start only the host application |
+| `pnpm run remote:dev` | Start only the remote application |
+
+## 🏗️ Architecture
+
+```
+Host App (8080) ←→ Remote Module (8081)
+     ↓                    ↓
+  Container           Exposed App
+  Component           Component
+```
 
 ## 📁 Project Structure
 
@@ -48,18 +62,8 @@ mf-app/
 └── package.json               # Root configuration
 ```
 
-## 🔧 Development Configuration
+## 🔧 Development
 
 ### Default Ports
 - **Host**: http://localhost:8080
 - **Remote**: http://localhost:8081
-
-## 📚 Useful Scripts
-
-| Command | Description |
-|---------|-------------|
-| `pnpm dev` | Start both services in development mode |
-| `pnpm build` | Build both projects for production |
-| `pnpm run host:dev` | Start only the host |
-| `pnpm run remote:dev` | Start only the remote |
-
