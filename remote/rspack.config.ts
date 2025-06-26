@@ -27,10 +27,9 @@ export default withZephyr()({
     watchFiles: [path.resolve(__dirname, "src")],
   },
   output: {
-    // You need to set a unique value that is not equal to other applications
     uniqueName: "remote",
-    // publicPath must be configured if using manifest
-    publicPath: "http://localhost:8081/",
+    publicPath:
+      process.env.NODE_ENV === "production" ? "auto" : "http://localhost:8081/",
   },
 
   experiments: {
