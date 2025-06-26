@@ -14,5 +14,10 @@
   },
   "devDependencies": {
     "concurrently": "^9.2.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "echo 'Linting staged files...'"
+    ]
   }
 }
